@@ -23,10 +23,10 @@ public class LoginTest {
     @Test
     public void loginTest() {
         // Flujo de login
-        loginPage.entrarButton(); // Haz clic en el botón "Entrar"
-        loginPage.enterUsername("cuentademoorionhub@gmail.com"); // Ingresar usuario
-        loginPage.enterPassword("12345678Fs"); // Ingresar contraseña
-        loginPage.clickLoginButton(); // Haz clic en el botón de login
+        loginPage.entrarButton();
+        loginPage.enterUsername("cuentademoorionhub@gmail.com");
+        loginPage.enterPassword("12345678Fs");
+        loginPage.clickLoginButton();
 
         // Validación: Verificar si el login fue exitoso
         Assert.assertTrue(loginPage.isLoginSuccessful(), "El inicio de sesión falló");

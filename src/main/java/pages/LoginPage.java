@@ -18,23 +18,23 @@ public class LoginPage {
 
     public void entrarButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement entrarButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div/header/div/div/div/a[1]"))); // Ajusta el XPath según corresponda
+        WebElement entrarButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div/header/div/div/div/a[1]")));
         entrarButton.click();
 
 
         // Espera a que el campo de usuario esté visible
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/header/div/div/div/a[1]"))); // Cambia al ID correcto
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/header/div/div/div/a[1]")));
     }
 
     public void enterUsername(String username) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\":r0:\"]"))); // Cambia al ID correcto
+        WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\":r0:\"]")));
         usernameField.sendKeys("cuentademoorionhub@gmail.com");
 
     }
     public void enterPassword(String password) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\":r1:\"]"))); // Cambia al ID correcto
+        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\":r1:\"]")));
         passwordField.sendKeys("12345678Fs");
 
     }

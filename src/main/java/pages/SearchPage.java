@@ -62,7 +62,7 @@ public class SearchPage {
                 String name = product.findElement(productName).getText();
                 String price = product.findElement(productPrice).getText();
                 return new String[]{name, price};
-            }).collect(Collectors.toList()); // Cambiar .toList() por .collect(Collectors.toList())
+            }).collect(Collectors.toList());
         } catch (TimeoutException e) {
             throw new RuntimeException("La lista de productos no se cargó a tiempo.");
         }
