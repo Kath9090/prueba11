@@ -32,6 +32,7 @@ public class LoginPage {
         usernameField.sendKeys("cuentademoorionhub@gmail.com");
 
     }
+
     public void enterPassword(String password) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\":r1:\"]")));
@@ -41,14 +42,13 @@ public class LoginPage {
 
     public void clickLoginButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\":r2:\"]"))); // Cambia al ID correcto
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\":r2:\"]")));
         loginButton.click();
 
     }
 
     public boolean isLoginSuccessful() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        return wait.until(ExpectedConditions.urlContains("/dashboard")); // Cambia por la URL esperada tras el login
+        return wait.until(ExpectedConditions.urlContains("/dashboard"));
     }
 }
-
